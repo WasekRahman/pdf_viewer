@@ -1,0 +1,16 @@
+{% extends 'pdf_list.html' %}
+
+{% block content_header %}
+  <h2>PDF views</h2>
+    {% for p in pdf %}
+        <tr>
+
+          <td>{{ p.title }}</td>
+            <div class="container">
+    <embed height="700px" width=100% name="plugin" src="{{ p.pdf.url }}" type="application/pdf">
+            </div>
+        </tr>
+      {% endfor %}
+
+
+{% endblock %}

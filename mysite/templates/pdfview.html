@@ -1,0 +1,15 @@
+{%  extends 'base.html' %}
+
+{% block content %}
+<head>
+    <title></title>
+</head>
+<body>
+{% for p in pdf %}
+
+<object data='media\books\pdfs\'+{{ p.title }} type="application/x-pdf" title="SamplePdf" width="500" height="720">
+    <a href={{ p.title }}>shree</a>
+</object>
+{% endfor %}
+</body>
+{% endblock %}

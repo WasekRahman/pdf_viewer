@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% if user.is_authenticated %}
+        <h3><p class="display-4">Welcome back, {{ user.username }}</p></h3>
+            <br>
+            <br>
+            <br>
+            <p>
+    <a href="{% url 'class_upload_pdf' %}" class="btn btn-primary">Upload PDF</a>
+  </p>
+            <br>
+            <br>
+            <br>
+            <a href="{% url 'logout' %}?next={% url 'home' %}"> Logout</a>
+
+	{% else %}
+             <a class="lead" href="{% url 'login' %}">Log in</a>
+	{% endif %}
+
+{% endblock %}

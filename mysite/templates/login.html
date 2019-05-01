@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+   <div style="background: aliceblue">
+  <h2>For Faculties</h2>
+  <a href="{% url 'social:begin' 'google-oauth2' %}">Login with Google</a><br>
+   </div>
+    <br>
+    <a href="/" class="btn">Go back</a>
+{% endblock %}
